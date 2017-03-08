@@ -28,8 +28,18 @@ $(() => {
        */
       GoogleAuth.isSignedIn.listen(updateSigninStatus)
 
+      updateSigninStatus(GoogleAuth.isSignedIn.get())
+
       $('#js-signin-toggle').click(() => {
         handleAuthClick()
+      })
+
+      $('#js-test').click(() => {
+        sendAuthorizedApiRequest({
+          part: 'snippet',
+          mine: true
+        })
+        // gapi.client.youtube.playlists.list()
       })
 
       $('#js-access-revoke').click(() => {
@@ -55,9 +65,11 @@ $(() => {
     if (isSignedIn) {
       $('#js-signin-toggle').html('Sign out')
       $('#js-access-revoke').css('display', 'inline-block')
+      $('#js-test').css('display', 'inline-block')
     } else {
       $('#js-signin-toggle').html('Sign in')
       $('#js-access-revoke').css('display', 'none')
+      $('#js-test').css('display', 'none')
     }
   }
 
@@ -72,6 +84,10 @@ $(() => {
 
     if (isAuthorized) {
       gapi.client.youtube.playlists.list(requestDetails)
+        .then(
+          (response) => console.log(response),
+          (err) => console.error(err)
+        )
       currentApiRequest = {}
     } else {
       GoogleAuth.signIn()
