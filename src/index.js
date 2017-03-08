@@ -8,6 +8,7 @@ $(() => {
   let GoogleAuth // Google Auth object.
   let isAuthorized // Set when app loads. Update when user signs in/out
   let currentApiRequest // Last api request
+  const SCOPE = 'https://www.googleapis.com/auth/youtube'
 
   // Load the API's client and auth2 modules.
   // Call the initClient function after the modules load.
@@ -17,18 +18,18 @@ $(() => {
     gapi.client.init({
       'apiKey': API_KEY,
       'clientId': CLIENT_ID,
-      'scope': 'https://www.googleapis.com/auth/youtube',
+      'scope': SCOPE,
       'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest']
     }).then(() => {
       GoogleAuth = gapi.auth2.getAuthInstance()
 
+      isAuthorized = GoogleAuth.currentUser.get().hasGrantedScopes(SCOPE)
       /**
        * Listen for sign-in state changes.
        * Listener is invoked when OAuth2 server responds.
        */
+      updateSigninStatus(isAuthorized)
       GoogleAuth.isSignedIn.listen(updateSigninStatus)
-
-      updateSigninStatus(GoogleAuth.isSignedIn.get())
 
       $('#js-signin-toggle').click(() => {
         handleAuthClick()
