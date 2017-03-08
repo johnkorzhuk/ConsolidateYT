@@ -71,7 +71,7 @@ $(() => {
     currentApiRequest = requestDetails
 
     if (isAuthorized) {
-      gapi.client.request(requestDetails)
+      gapi.client.youtube.playlists.list(requestDetails)
       currentApiRequest = {}
     } else {
       GoogleAuth.signIn()

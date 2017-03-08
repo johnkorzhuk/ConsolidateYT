@@ -2,7 +2,7 @@
 
 # ConsolidateYT
 
-An app that pulls data from spotify / soundcloud / youtube and consolidates it into one youtube playlist
+An app that pulls data from spotify or youtube and consolidates it into one youtube playlist
 
 ### API Todos
 
@@ -16,6 +16,12 @@ An app that pulls data from spotify / soundcloud / youtube and consolidates it i
 
 - [ ] Handle users who signed in but didn't grant access
 
+### Important Features
 
-### Questions for Emanuel
+- [ ] Toggle between creating a private and public playlist
+
+### Possible features
+
+- [ ] Merge with existing youtube playlists
+- [ ] Add soundcloud or other music services
 
