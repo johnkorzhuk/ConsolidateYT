@@ -4,7 +4,7 @@
 
 An app that pulls data from spotify / soundcloud / youtube and consolidates it into one youtube playlist
 
-### MVP Todos
+### API Todos
 
 - [x] Get OAuth2 working with youtube data scope
 - [ ] Create a playlist
@@ -12,7 +12,7 @@ An app that pulls data from spotify / soundcloud / youtube and consolidates it i
 - [ ] Pull playlist from spotify from user input
 - [ ] Create youtube playlist from spotify playlist
 
-### Todos
+### MVP Todos
 
 - [ ] Handle users who signed in but didn't grant access
 
