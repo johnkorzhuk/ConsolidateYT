@@ -8,13 +8,13 @@ An app that pulls data from spotify or youtube and consolidates it into one yout
 
 - [x] Get OAuth2 working with youtube data scope
 - [x] Create a playlist
-- [ ] Add items to that playlist
+- [x] Add items to that playlist
 - [ ] Pull playlist from spotify from user input
-- [ ] Create youtube playlist from spotify playlist
 
 ### MVP Todos
 
 - [ ] Handle users who signed in but didn't grant access
+- [ ] Create youtube playlist from spotify playlist
 
 ### Important Features
 
