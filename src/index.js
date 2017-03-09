@@ -35,21 +35,38 @@ function initClient () {
       handleAuthClick()
     })
 
+    // $('#js-test').click(() => {
+    //   createPlayList({
+    //     part: 'snippet,status',
+    //     resource: {
+    //       snippet: {
+    //         title: 'Test Playlist numba 2',
+    //         description: 'A private playlist created with the YouTube API'
+    //       },
+    //       status: {
+    //         privacyStatus: 'private'
+    //       }
+    //     }
+    //   }, 'insert')
+    //   .then((playlistId) => addVideoToPlaylist('LbFCq897X6k', playlistId))
+    //   .then((data) => console.log(data))
+    // })
     $('#js-test').click(() => {
-      createPlayList({
-        part: 'snippet,status',
-        resource: {
-          snippet: {
-            title: 'Test Playlist numba 2',
-            description: 'A private playlist created with the YouTube API'
-          },
-          status: {
-            privacyStatus: 'private'
-          }
+      $.ajax({
+        url: 'https://api.spotify.com/v1/search',
+        dataType: 'json',
+        data: {
+          q: "Katy Perry - Teenage Dream: The Complete Confection",
+          type: 'track'
+          // type: 'track,album,artist'
+        },
+        success (data) {
+          console.log(data)
+        },
+        error (jqXHR, textStatus, err) {
+          console.error(err)
         }
-      }, 'insert')
-      .then((playlistId) => addVideoToPlaylist('LbFCq897X6k', playlistId))
-      .then((data) => console.log(data))
+      })
     })
 
     $('#js-access-revoke').click(() => {

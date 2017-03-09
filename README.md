@@ -2,26 +2,21 @@
 
 # ConsolidateYT
 
-An app that pulls data from spotify or youtube and consolidates it into one youtube playlist
+An app that pulls music from spotify and consolidates it into one youtube playlist
 
 ### API Todos
 
 - [x] Get OAuth2 working with youtube data scope
 - [x] Create a playlist
 - [x] Add items to that playlist
-- [ ] Pull playlist from spotify from user input
+- [x] Pull music from spotify api
 
 ### MVP Todos
 
-- [ ] Handle users who signed in but didn't grant access
-- [ ] Create youtube playlist from spotify playlist
+- [ ] Create youtube playlist from selected spotify tracks
 
 ### Important Features
 
 - [ ] Toggle between creating a private and public playlist
 
-### Possible features
-
-- [ ] Merge with existing youtube playlists
-- [ ] Add soundcloud or other music services
 
