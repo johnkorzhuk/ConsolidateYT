@@ -32,7 +32,8 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: `${srcDir}/index.html`
+      template: `${srcDir}/index.html`,
+      inject: 'head'
     }),
     new Dotenv({
       path: './.env'

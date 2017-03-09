@@ -32,7 +32,8 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './index.html',
+      inject: 'head'
     }),
     new ExtractTextPlguin('style.css'),
     new CleanWebpackPlugin([ 'dist' ]),
