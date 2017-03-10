@@ -4,15 +4,9 @@
 
 An app that pulls music from spotify and consolidates it into one youtube playlist
 
-### API Todos
-
-- [x] Get OAuth2 working with youtube data scope
-- [x] Create a playlist
-- [x] Add items to that playlist
-- [x] Pull music from spotify api
-
 ### MVP Todos
 
+- [x] Seperate js files
 - [ ] Build out home page with sidebar w/ dummy elements
 - [ ] Build out search form to query Spotify api
 - [ ] Build out search results for tracks only
