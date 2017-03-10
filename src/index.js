@@ -1,2 +1,2 @@
-import './css/style.css'
+import './css/index'
 import './js/auth'

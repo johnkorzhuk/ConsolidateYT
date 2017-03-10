@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.row {
+  max-width: 1000px;
+	margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.heading-content {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	min-height: 200px;
+}
+
+.landing-page {
+	margin-bottom: 200px;
+}
+
+.intro {
+	margin: 0 auto;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+	.heading-content {
+		text-align: center;
+	}
+
+	.intro {
+		max-width: 600px;
+	}
+
+	.intro p {
+		text-align: left;
+	}
+}
+
