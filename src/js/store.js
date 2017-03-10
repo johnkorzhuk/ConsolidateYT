@@ -16,7 +16,6 @@ export const updateCurrentApiReq = (currentApiReq) => {
   }
 }
 
-
 export const updatePlaylistId = (playlistId) => {
   if (state.playlistId !== playlistId) {
     state.playlistId = playlistId

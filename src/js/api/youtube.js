@@ -22,11 +22,10 @@ export const sendAuthorizedApiRequest = (reqDetails) => {
   if (isAuthorized) {
     updateCurrentApiReq(null)
 
-    return uri(data)
-      .then(
-        (response) => sortResByReqType(response.result, type),
-        (err) => console.error(err)
-      )
+    return uri(data).then(
+      (response) => sortResByReqType(response.result, type),
+      (err) => console.error(err)
+    )
   } else {
     gapi.auth2.getAuthInstance().signIn()
   }
