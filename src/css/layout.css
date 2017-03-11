@@ -21,8 +21,7 @@ body {
 .heading-content {
 	display: flex;
 	align-items: center;
-	height: 100vh;
-	min-height: 200px;
+	height: 100vh; 
 }
 
 .landing-page {
@@ -32,8 +31,6 @@ body {
 .intro {
 	margin: 0 auto;
 }
-
-
 
 @media only screen and (min-width: 768px) {
 	.heading-content {

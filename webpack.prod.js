@@ -1,7 +1,7 @@
 const { resolve } = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlguin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 
@@ -23,10 +23,7 @@ module.exports = {
       loader: 'babel-loader'
     }, {
       test: /\.css$/,
-      use: ExtractTextPlguin.extract({
-        fallback: 'style-loader',
-        use: 'css-loader'
-      })
+      use: ExtractTextPlugin.extract(['css-loader'])
     }]
   },
   devtool: 'source-map',
@@ -35,7 +32,7 @@ module.exports = {
       template: './index.html',
       inject: 'head'
     }),
-    new ExtractTextPlguin('style.css'),
+    new ExtractTextPlugin('style.css'),
     new CleanWebpackPlugin([ 'dist' ]),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']

@@ -7,12 +7,10 @@ An app that pulls music from spotify and consolidates it into one youtube playli
 ### MVP Todos
 
 - [x] Seperate js files
-- [x] Build out landing page layout
-- [ ] Build out search form to query Spotify api layout
-- [ ] Build out search results layout for tracks only
-- [ ] Album & artist accordians layout for search results
-- [ ] Layout for tracks nested in Albums & artistss
-- [ ] Added tracks layout (sidebar for desktop)
+- [x] Build out landing page
+- [ ] Build out search form to query Spotify api
+- [ ] Build out search results for tracks only
+- [ ] Album & artist accordians for search results
 - [ ] Add functionality to accordians for searech results
 - [ ] Add functionality to add tracks to sidebar
 - [ ] Add "create playlist" button that acts either as a "sign-in" or "generate playlist" button
