@@ -3,14 +3,14 @@ let state = {
   isSignedIn: false,
   playlistId: null,
   currentApiReq: null,
-  spotifyQuery: ''
+  nextSpotifyQueryList: ''
 }
 
 export const getState = () =>
   state
 
-export const updateSpotifyQuery = (query) => {
-  state.spotifyQuery = query
+export const updateNextSpotifyQueryList = (query) => {
+  state.nextSpotifyQueryList = query
 }
 export const updateCurrentApiReq = (currentApiReq) => {
   state.currentApiReq = currentApiReq
