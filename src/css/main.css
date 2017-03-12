@@ -1,3 +1,7 @@
+.hero {
+  background-color: mediumaquamarine;
+}
+
 .btn {
   padding: 10px 15px;
   background-color: lightblue;
@@ -5,4 +9,8 @@
 
 .heading-content {
   background-color: cornsilk;
+}
+
+.search-form h2 {
+  margin-bottom: 2.5rem;
 }

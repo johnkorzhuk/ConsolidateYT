@@ -1,5 +1,3 @@
-import { renderSignInStatus } from './components/mapStateToUi'
-
 let state = {
   isAuthorized: false,
   isSignedIn: false,

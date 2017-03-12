@@ -8,7 +8,7 @@ An app that pulls music from spotify and consolidates it into one youtube playli
 
 - [x] Seperate js files
 - [x] Build out landing page
-- [ ] Build out search form to query Spotify api
+- [x] Build out search form to query Spotify api
 - [ ] Build out search results for tracks only
 - [ ] Album & artist accordians for search results
 - [ ] Add functionality to accordians for searech results
