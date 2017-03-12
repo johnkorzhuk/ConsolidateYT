@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import './searchBar.css'
 
 export default () => {
   $('.js-intro')
@@ -13,11 +14,13 @@ export default () => {
     .remove()
 
   $('.js-hero').css({
-    justifyContent: 'flex-start',
-    height: 'auto'
+    justifyContent: 'flex-start'
   })
 
-  $('.js-form-container').css('display', 'block')
+  $('.js-form-container').css({
+    display: 'block',
+    marginTop: '30vh'
+  })
   $('.search-form').css('margin-bottom', '3rem')
   $('#js-search').focus()
 

@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import dummyData from './../../dummyData.json'
 
 export const getSpotifyData = (query) =>
   new Promise((resolve, reject) => {
@@ -17,4 +18,9 @@ export const getSpotifyData = (query) =>
         reject(err)
       }
     })
+  })
+
+export const getDummyData = () =>
+  new Promise((resolve, reject) => {
+    resolve(dummyData)
   })

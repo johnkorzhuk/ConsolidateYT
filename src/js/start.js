@@ -1,8 +1,9 @@
 import $ from 'jquery'
 
 import { updateSpotifyQuery } from './store'
-import { getSpotifyData } from './api/spotify'
-import renderSearch from './ui/renderSearch'
+import { getSpotifyData, getDummyData } from './api/spotify'
+import renderSearch from './ui/SearchBar/searchBar'
+import renderTable from './ui/SongResultTable/songResultTable'
 
 $(() => {
   $('.js-start').click(() => {
@@ -14,7 +15,17 @@ $(() => {
     e.preventDefault()
 
     updateSpotifyQuery(query)
-    getSpotifyData(query)
-      .then((data) => console.log(data))
+
+    getDummyData()
+      .then((data) => {
+        $('.song-data').html(renderTable($('.song-data'), data))
+        $('.js-form-container').css('margin-top', '0')
+        $('.js-hero').css({
+          height: 'auto'
+        })
+      })
+      .catch(() => {
+        $('.song-data').html('<h2>Oh no! Something went wrong :(</h2>')
+      })
   })
 })
