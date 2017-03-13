@@ -25,7 +25,7 @@ $(() => {
       .find('.js-header')
       .removeClass()
       .detach()
-    
+
     heading
       .find('.logo')
       .removeClass()

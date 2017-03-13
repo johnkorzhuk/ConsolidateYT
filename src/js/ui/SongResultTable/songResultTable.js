@@ -32,10 +32,11 @@ function renderDataRows (songs) {
     } = song
 
     html += `
-      <tr class="row">
-        <td title="${songName}">${songName}</td>
-        <td title="${artistNames}">${artistNames}</td>
-        <td title="${albumName}">${albumName}</td>
+      <tr class="song-data-row">
+        <td class="add-song"><button>+</button></td>
+        <td class="song-data-name" title="${songName}">${songName}</td>
+        <td class="song-data-artists" title="${artistNames}">${artistNames}</td>
+        <td class="song-data-album" title="${albumName}">${albumName}</td>
       </tr>
     `
   })
@@ -58,10 +59,11 @@ export default (node, state) => {
   return `
     <table class="song-data-container">
       <thead class="song-data-head">
-        <tr class="row">
-          <th>Song</th>
-          <th>Atrist</th>
-          <th>Album</th>
+        <tr class="song-data-row">
+          <th class="add-song"></th>
+          <th class="song-data-name">Song</th>
+          <th class="song-data-artists">Atrist</th>
+          <th class="song-data-album">Album</th>
         </tr>
       </thead>
       <tbody class="song-data">

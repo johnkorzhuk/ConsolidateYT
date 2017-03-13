@@ -1,0 +1,44 @@
+.song-data-container {
+  width: 100%;
+}
+
+.song-data-container th,
+.song-data-container td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.song-data-container th {
+  text-align: left;
+}
+
+.song-data-row {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.add-song {
+  flex-basis: 4rem;
+  text-align: center;
+}
+
+.song-data-name {
+  flex: 3;
+}
+
+.song-data-artists {
+  flex: 2;
+}
+
+.song-data-album {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .song-data-album {
+    flex: 2;
+    display: inline;
+  }
+}
