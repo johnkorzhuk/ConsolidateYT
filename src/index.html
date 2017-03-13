@@ -7,22 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-
     <section class="hero js-hero">
-      <header class="intro container js-intro">
-        <h1>ConsolidateYT</h1>
-        <p>
-          A sweet and simple little aplication that takes your favorite music from
-          Spotify and creates a Youtube playlist on your account for you.
-        </p>
-        <button class="btn js-start">Get started</button>
-      </header> 
-      <div style="display: none" class="container js-form-container">
-        <form class="search-form js-search-form">
-          <h2><label class="search-label" for="js-search">Search for your favorite tracks on Spotify.</label></h2>
-          <input class="search-input" id="js-search" type="text" required/>
-        </form>
+      <div class="container intro">
+        <div class="row">
+          <header class="col-8 col-offset-2">
+            <h1>ConsolidateYT</h1>
+            <p>A sweet and simple little aplication that takes your favorite music from
+            Spotify and creates a playlist on your Youtube account for you.</p>
+          </header>
+        </div>
+
+        <div class="row">
+          <form class="search-form js-search-form col-10 col-offset-1">
+            <label class="search-label" for="js-search"></label>
+            <input class="search-input" id="js-search" type="text" placeholder="Katy Perry Teenage Dream" required autofocus/>
+            <button class="btn js-start" type="submit">Search</button>
+          </form>
+        </div>
       </div>
+      
     </section>
     <section class="song-data">
       

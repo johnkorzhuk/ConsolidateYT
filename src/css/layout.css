@@ -12,6 +12,7 @@ html {
 html { 
   font-size: 62.5%; 
 } 
+
 body { 
   font-size: 14px; 
   font-size: 1.4rem; 
@@ -27,35 +28,13 @@ h2 {
   font-size: 2rem; 
 } 
 
-body {
-	margin: 0;
-}
-
-.container {
-	padding: 0 20px;
-	max-width: 700px;
-}
-
 .intro {
-	margin-top: 10vh;
-	padding: 0 20px;
+	padding-top: 10vh;
+	text-align: center;
 }
 
 .hero {
 	height: 100vh; 
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.btn {
-	display: block;
-	margin: 0 auto;
-}
-
-.search-form {
-	margin-bottom: 10vh;
 }
 
 .search-label {
@@ -63,8 +42,14 @@ body {
   display: block;
 }
 
+.search-form {
+	margin-bottom: 10vh;
+	display: flex;
+}
+
 .search-input {
-	width: 80%;
+	flex: 1;
+	padding: 0 1rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -79,6 +64,14 @@ body {
 	}
 
 	.intro {
-		margin-top: 30vh;
+		padding-top: 20vh;
+	}
+	
+	.search-input {
+		height: 3rem;
+	}
+
+	.btn {
+		display: none;
 	}
 }
