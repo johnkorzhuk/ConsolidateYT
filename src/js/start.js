@@ -5,10 +5,6 @@ import { getSpotifyData, getDummyData } from './api/spotify'
 import renderTable from './ui/SongResultTable/songResultTable'
 
 $(() => {
-  // $('.js-start').click(() => {
-  //   renderSearch()
-  // })
-
   $('.js-search-form').submit((e) => {
     e.preventDefault()
 
@@ -24,29 +20,29 @@ $(() => {
     //   .catch(() => {
     //     $('.song-data').html('<h2>Oh no! Something went wrong :(</h2>')
     //   })
-    $('.js-intro')
-      // .removeClass('container')
-      .css({
-        marginTop: 0,
-        alignSelf: 'flex-start'
-      })
-      .children()
-      .css('font-size', '2.5rem')
-      .not('h1')
+    const $hero = $('.js-hero')
+    const heading = $hero
+      .find('.js-header')
+      .removeClass()
+      .detach()
+    
+    heading
+      .find('.logo')
+      .removeClass()
+      .addClass('logo-small')
+      .siblings('p')
       .remove()
 
-    $('.js-hero').css({
-      justifyContent: 'flex-start'
-    })
+    $hero
+      .css('height', 'auto')
+      .find('.js-intro')
+      .removeClass('intro')
+      .prepend(heading)
+      .find('.js-header-row')
+      .remove()
 
-    $('.js-form-container').css({
-      display: 'block',
-      marginTop: '30vh'
-    })
-    $('.search-form').css('margin-bottom', '3rem')
-    $('#js-search').focus()
+    $('.js-search-label').html('<h2>Search for your favorite Spotify tracks.</h2>')
 
-    $('.js-start').off()
     getDummyData()
       .then((data) => {
         $('.song-data').html(renderTable($('.song-data'), data))

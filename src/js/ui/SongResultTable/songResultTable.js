@@ -32,7 +32,7 @@ function renderDataRows (songs) {
     } = song
 
     html += `
-      <tr>
+      <tr class="row">
         <td title="${songName}">${songName}</td>
         <td title="${artistNames}">${artistNames}</td>
         <td title="${albumName}">${albumName}</td>
@@ -58,7 +58,7 @@ export default (node, state) => {
   return `
     <table class="song-data-container">
       <thead class="song-data-head">
-        <tr>
+        <tr class="row">
           <th>Song</th>
           <th>Atrist</th>
           <th>Album</th>
